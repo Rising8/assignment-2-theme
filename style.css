@@ -1,0 +1,72 @@
+/* 
+Theme Name: Esports Arena
+Theme URI: http://localhost/wordpress2/wp-content/themes/esports-arena
+Author: Edmand Cheung
+Author URI: http://localhost/wordpress2
+Description: A custom WordPress theme for gaming and esports teams.
+Version: 1.0.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: esports-arena
+*/
+
+/* === Body Styling === */
+body 
+{
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif
+}
+
+header
+{
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.site-title a 
+{
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.site-description 
+{
+    color: #ddd;
+    font-size: 14px;
+}
+
+nav 
+{
+    margin-top: 10px;
+}
+
+.nav-menu 
+{
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li 
+{
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-menu li a 
+{
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-menu li a:hover 
+{
+    color: #ff0044;
+}
