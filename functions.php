@@ -1,5 +1,7 @@
 <?php
-function esports_theme_setup() {
+
+function esports_theme_setup() 
+{
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
 
@@ -7,30 +9,27 @@ function esports_theme_setup() {
         'primary' => __('Primary Menu', 'esports-arena'),
     ));
 }
-
 add_action('after_setup_theme', 'esports_theme_setup');
 
-function esports_enqueue_styles() {
+function esports_enqueue_styles() 
+{
     wp_enqueue_style('esports-style', get_stylesheet_uri());
 }
-
 add_action('wp_enqueue_scripts', 'esports_enqueue_styles');
 
-function esports_arena_theme_setup() {
+function esports_arena_theme_setup() 
+{
     register_nav_menus(array(
         'main-menu' => __('Main Menu', 'esports-arena'),
     ));
 }
 add_action('after_setup_theme', 'esports_arena_theme_setup');
 
-function set_default_site_title() {
-    $current_title = get_option('blogname');
-
-    if ($current_title === 'WordPress' || $current_title === 'WordPress2') { 
-        update_option('blogname', 'Esports Arena');
-        update_option('blogdescription', 'The Ultimate Competitive Gaming Hub');
-    }
-}
-add_action('init', 'set_default_site_title'); // Runs when WordPress initializes
+function force_esports_arena_title() 
+{ 
+    update_option('blogname', 'Esports Arena'); 
+    update_option('blogdescription', 'The Ultimate Competitive Gaming Hub'); 
+} 
+add_action('after_switch_theme', 'force_esports_arena_title'); // Runs when theme is activated
 
 ?>  
