@@ -15,14 +15,4 @@
         </h1>
         <p class="site-description"><?php bloginfo('description'); ?></p>
     </div>
-
-    <nav>
-        <?php 
-            wp_nav_menu(array(
-                'theme_location' => 'main-menu',
-                'container' => false,
-                'menu_class' => 'nav-menu'
-            )); 
-        ?>
-    </nav>
 </header>
