@@ -92,40 +92,6 @@ header
     box-shadow: 0 0 10px #00ffcc;
 }
 
-/* === Upcoming Tournaments Section === */
-
-.upcoming-tournaments 
-{
-    background: #222;
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3);
-}
-
-.upcoming-tournaments ul 
-{
-    list-style-type: none; /* Removes the bullets */
-    padding: 0;
-}
-
-.upcoming-tournaments h2 
-{
-    color: #00ffcc;
-}
-
-.upcoming-tournaments li 
-{
-    margin-bottom: 10px; 
-    font-size: 18px;
-}
-
-.upcoming-tournaments li 
-{
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 /* === Live Streams Section with Bootstrap Cards === */
 
 .live-streams .card 
@@ -214,6 +180,144 @@ header
     text-transform: uppercase;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); 
     margin-bottom: 20px;
+}
+
+/* === Upcoming Tournaments Section === */
+
+.upcoming-tournaments 
+{
+    background: #222;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3);
+}
+
+/* Styling for Tournament List */
+
+.upcoming-tournaments ul 
+{
+    list-style-type: none; /* Removes the bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.upcoming-tournaments h2 
+{
+    color: #ffcc00;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.upcoming-tournaments h5
+{
+    color: #ff4500;
+    font-size: 2rem;
+}
+
+.upcoming-tournaments li 
+{
+    margin-bottom: 15px; 
+    font-size: 18px;
+}
+
+/* Individual Tournament Styling */
+
+.upcoming-tournaments li a
+{
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Each Tournament */
+
+.upcoming-tournaments li a:hover
+{
+    background-color: #00ffcc;
+    transform: scale(1.05);
+}
+
+/* Styling for Collapsible Tournament Details */
+
+.card-body
+{
+    background-color: #444;
+    padding: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.card-body p
+{
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #000000;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.card-body p strong
+{
+    color: #00bfff;
+    font-weight: bold;
+}
+
+/* Smooth Transition for Collapsible Details */
+
+.collapse
+{
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Styling for Card Border */
+
+.card
+{
+    border: 1px solid #444;
+    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+}
+
+.card-header 
+{
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px)
+{
+    .upcoming-tournaments
+    {
+        padding: 20px;
+    }
+
+    .upcoming-tournaments h2 
+    {
+        font-size: 2rem;
+    }
+
+    .upcoiming-tournaments h5 
+    {
+        font-size: 1.5rem;
+    }
+
+    .upcoming-tournaments li a 
+    {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .card-body
+    {
+        padding: 15px;
+    }
 }
 
 /* === Social Media Section with Bootstrap Cards === */
