@@ -43,12 +43,13 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Upcoming Matches</h5>
+            <div class="accordion" id="tournamentAccordion">
             <ul>
                 <li>
                     <a class="d-block" data-toggle="collapse" href="#tournament1" role="button" aria-expanded="false" aria-controls="tournament1">
                         <strong>Battle Royale Invitational - Fortnite</strong> - Date: May 25, 2025
                     </a>
-                    <div class="collapse" id="tournament1">
+                    <div class="collapse" id="tournament1" data-parent="#tournamentAccordion">
                         <div class="card card-body mt-2">
                             <p><strong>Description:</strong> The Battle Royale Invitational is an online-only event bringing together top competitive fortnite players from around the world. Contestants battle it out in a last-duo-standing format, where only the best duo survives to claim the grand prize.</p>
                             <p><strong>Location:</strong> Online</p>
@@ -63,7 +64,7 @@
                     <a class="d-block" data-toggle="collapse" href="#tournament2" role="button" aria-expanded="false" aria-controls="tournament2">
                         <strong>Champion's League - Valorant</strong> - Date: June 18, 2025
                     </a>
-                    <div class="collapse" id="tournament2">
+                    <div class="collapse" id="tournament2" data-parent="#tournamentAccordion">
                         <div class="card card-body mt-2">
                             <p><strong>Description:</strong> The Champion's League is an annual tournament featuring the world’s best valorant players. This tournament is played in a series of group stages followed by knockout rounds.</p>
                             <p><strong>Location:</strong> Perth Stadium </p>
@@ -78,7 +79,7 @@
                     <a class="d-block" data-toggle="collapse" href="#tournament3" role="button" aria-expanded="false" aria-controls="tournament3">
                         <strong>Esports Championship - League of Legends</strong> - Date: July 28, 2025
                     </a>
-                    <div class="collapse" id="tournament3">
+                    <div class="collapse" id="tournament3" data-parent="#tournamentAccordion">
                         <div class="card card-body mt-2">
                             <p><strong>Description:</strong> The Esports Championship brings together elite players, competing for the title of best overall league of legends esports team. The tournament will span over several weeks.</p>
                             <p><strong>Location:</strong> Las Vegas</p>
@@ -93,7 +94,7 @@
                     <a class="d-block" data-toggle="collapse" href="#tournament4" role="button" aria-expanded="false" aria-controls="tournament4">
                         <strong>World Championship - Dota 2, Dead By Daylight, Rocket League</strong> - Date: September 29, 2025
                     </a>
-                    <div class="collapse" id="tournament4">
+                    <div class="collapse" id="tournament4" data-parent="#tournamentAccordion">
                         <div class="card card-body mt-2">
                             <p><strong>Description:</strong> The World Championship is the pinnacle of competitive gaming, featuring the top players across multiple genres. This tournament is considered the ultimate test for esports athletes, where the best of the best compete for international glory.</p>
                             <p><strong>Location:</strong> Tokyo </p>
