@@ -315,14 +315,13 @@ footer
 
 /* Search Bar Styling */
 
-.search-form 
-{
+/* Search Bar Styling */
+.search-form {
     display: flex;
     align-items: center;
 }
 
-.search-input 
-{
+.search-input {
     padding: 10px;
     border-radius: 20px;
     border: 1px solid #ccc;
@@ -330,14 +329,12 @@ footer
     transition: all 0.3s ease;
 }
 
-.search-input:focus 
-{
+.search-input:focus {
     outline: none;
     border-color: #ff0044;
 }
 
-.search-btn 
-{
+.search-btn {
     background-color: #ff0044; /* Button color for the search */
     color: #fff;
     border-radius: 20px;
@@ -347,20 +344,17 @@ footer
     cursor: pointer;
 }
 
-.search-btn:hover 
-{
+.search-btn:hover {
     background-color: #00ffcc; /* Change button color on hover */
 }
 
-/* Style for the button when it's active/focused */
-.search-btn:active 
-{
+/* Optional: Style for the button when it's active/focused */
+.search-btn:active {
     background-color: #ff0022;
 }
 
 /* Style for no results found message */
-.no-results 
-{
+.no-results {
     background-color: #f8d7da; /* Light red background */
     color: #721c24; /* Dark red text */
     border: 1px solid #f5c6cb; /* Light red border */
@@ -369,4 +363,35 @@ footer
     text-align: center;
     margin-top: 20px;
     border-radius: 5px;
+}
+
+/* Posts Styling */
+
+.posts-section h2 
+{
+    color: #ff4500; /* Change this to match your theme */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.posts .post-item 
+{
+    background: #222; /* Dark background */
+    color: #fff; /* White text */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.posts .post-item h3 a 
+{
+    color: #ff4500; /* Highlight post titles */
+    text-decoration: none;
+}
+
+.posts .post-item h3 a:hover {
+    text-decoration: underline;
 }

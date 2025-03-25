@@ -40,9 +40,9 @@
                 </ul>
 
                 <!-- Search Bar -->
-                <form class="d-flex" action="<?php echo home_url('/'); ?>" method="get">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="s">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex search-form" action="<?php echo home_url('/'); ?>" method="get">
+                    <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search" name="s">
+                    <button class="search-btn" type="submit">Search</button>
                 </form>
             </div>
         </div>

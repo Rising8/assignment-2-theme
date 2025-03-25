@@ -42,12 +42,13 @@
                 <li><strong>Battle Royale Invitational</strong> - Date: May 25, 2025</li>
                 <li><strong>Champion's League</strong> - Date: June 10, 2025</li>
                 <li><strong>Esports Championship</strong> - Date: July 15, 2025</li>
+                <li><strong>World Championship</strong> - Date: September 29, 2025</li>
             </ul>
         </div>
     </div>
 </section>
 
-<!-- Social Media Section with Bootstrap Cards -->
+<!-- Social Media Section -->
 <section class="social-media" id="follow-us">
     <h2>Follow Us</h2>
     <div class="card">
@@ -60,6 +61,31 @@
             </ul>
         </div>
     </div>
+</section>
+
+<!-- Posts Section -->
+<section class="posts-section">
+    <h2>Latest Posts</h2>
+    <?php if (have_posts()) : ?>
+        <?php if (is_search()) : ?>
+            <section class="search-results">
+                <h2>Search Results for: <?php echo get_search_query(); ?></h2>
+            </section>
+        <?php endif; ?>
+
+        <div class="posts">
+            <?php while (have_posts()) : the_post(); ?>
+                <div class="post-item">
+                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <p><?php the_excerpt(); ?></p>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    <?php else : ?>
+        <section class="no-results">
+            <p>No results found. Please try a different search.</p>
+        </section>
+    <?php endif; ?>
 </section>
 
 <?php get_footer(); ?>
