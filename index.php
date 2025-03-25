@@ -5,6 +5,8 @@
     <p>Your ultimate destination for gaming news, leaderboards, and live tournaments.</p>
 </section>
 
+<?php quote_of_the_day(); ?>
+
 <!-- Live Streams Section with Bootstrap Cards -->
 
 <section class="live-streams" id="live-streams">

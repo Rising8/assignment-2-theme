@@ -66,7 +66,8 @@ header
 .arena p 
 {
     font-size: 20px;
-    color: #fff;
+    color: #02ec73;
+    font-weight: bold;
 }
 
 /* === Buttons === */
@@ -119,6 +120,7 @@ header
 .live-streams .card-text 
 {
     font-size: 18px;
+    color: #cf0a0a;
 }
 
 /* === Live Streams Section Header === */
@@ -537,4 +539,43 @@ footer
 
 .posts .post-item h3 a:hover {
     text-decoration: underline;
+}
+
+/* Quote of the Day Styling */
+
+.quote_of_the_day 
+{
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3); 
+    color: #00ff00;
+    font-family: 'Roboto', sans-serif; /* Roboto font */
+    text-align: center; 
+    max-width: 400px; 
+    margin: 20px auto;
+}
+
+.quote_of_the_day h3 
+{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.quote_of_the_day p 
+{
+    font-style: italic;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+/* Neon glow effect on hover */
+.quote_of_the_day:hover 
+{
+    box-shadow: 0 0 10px 2px rgba(0, 255, 0, 1); /* Intensifies neon glow */
+    background-color: rgba(0, 0, 0, 1); 
 }

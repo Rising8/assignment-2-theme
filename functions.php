@@ -29,4 +29,25 @@ function force_esports_arena_title()
 } 
 add_action('after_switch_theme', 'force_esports_arena_title'); // Runs when theme is activated
 
+/* Custom Widget - Quote of the Day - Completely copied from my Assessment 1! */
+
+function quote_of_the_day() 
+{
+    $quotes = array(
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "It does not matter how slowly you go, as long as you do not stop. - Confucius",
+        "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+        "A journey of a thousand miles begins with a single step. - Lao Tzu",
+        "You miss 100% of the shots you don't take. - Wayne Gretzky",
+        "Life is what happens when you're busy making other plans. - John Lennon"
+    );
+
+    $random_quote = esc_html($quotes[array_rand($quotes)]);
+
+    echo '<div class="quote_of_the_day">';
+    echo '<h3>Quote of the Day!</h3>';
+    echo '<p>"' . $random_quote . '"</p>';
+    echo '</div>';
+}
+
 ?>
