@@ -116,7 +116,7 @@ header
 
 .upcoming-tournaments li 
 {
-    margin-bottom: 10px; /* Add space between each tournament */
+    margin-bottom: 10px; 
     font-size: 18px;
 }
 
@@ -315,27 +315,38 @@ footer
 
 /* Search Bar Styling */
 
-/* Search Bar Styling */
-.search-form {
+.search-form 
+{
     display: flex;
     align-items: center;
 }
 
-.search-input {
+/* Input Field Styling */
+
+.search-form input.form-control 
+{
     padding: 10px;
     border-radius: 20px;
     border: 1px solid #ccc;
     margin-right: 10px;
     transition: all 0.3s ease;
+    width: 180px;
 }
 
-.search-input:focus {
+/* Focus Effect */
+
+.search-form input.form-control:focus 
+{
     outline: none;
     border-color: #ff0044;
+    box-shadow: 0 0 5px rgba(255, 0, 68, 0.5);
 }
 
-.search-btn {
-    background-color: #ff0044; /* Button color for the search */
+/* Search Button Styling */
+
+.search-form button.btn 
+{
+    background-color: #ff0044; 
     color: #fff;
     border-radius: 20px;
     border: none;
@@ -344,20 +355,48 @@ footer
     cursor: pointer;
 }
 
-.search-btn:hover {
-    background-color: #00ffcc; /* Change button color on hover */
+.search-form button.btn:hover 
+{
+    background-color: #00ffcc; /* Changes button color on hover */
 }
 
-/* Optional: Style for the button when it's active/focused */
-.search-btn:active {
+/* Style for the button when it's active/focused */
+
+.search-form button.btn:active 
+{
     background-color: #ff0022;
+    box-shadow: 0 0 5px rgba(255, 0, 34, 0.5);
+}
+
+/* Responsive Fixes */
+
+@media (max-width: 768px)
+{
+    .search-form
+    {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-form .form-control
+    {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-form .btn
+    {
+        width: 100%;
+    }
 }
 
 /* Style for no results found message */
-.no-results {
-    background-color: #f8d7da; /* Light red background */
-    color: #721c24; /* Dark red text */
-    border: 1px solid #f5c6cb; /* Light red border */
+
+.no-results 
+{
+    background-color: #f8d7da; 
+    color: #721c24; 
+    border: 1px solid #f5c6cb; 
     padding: 20px;
     font-size: 1.2em;
     text-align: center;
@@ -369,7 +408,7 @@ footer
 
 .posts-section h2 
 {
-    color: #ff4500; /* Change this to match your theme */
+    color: #ff4500; 
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
