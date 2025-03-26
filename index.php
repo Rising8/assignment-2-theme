@@ -7,34 +7,448 @@
 
 <?php quote_of_the_day(); ?>
 
-<!-- Live Streams Section with Bootstrap Cards -->
+<!-- Leaderboard Section with Bootstrap Cards - all information is fake and not to be trusted, it is just a sample -->
 
-<section class="live-streams" id="live-streams">
-    <h2>Live Streams</h2>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">No live streams currently available.</h5>
-            <p class="card-text">Stay tuned for upcoming events!</p>
+<div id="game-leaderboard" class="container mt-5 leaderboard-section">
+    <h2>Top Teams</h2>
+
+    <!-- Accordion for Game Categories -->
+    <div id="leaderboardAccordion">
+        
+        <!-- League of Legends -->
+
+        <div class="game-leaderboard">
+            <div class="card">
+                <div class="card-header" id="headingLoL">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#lolLeaderboard" aria-expanded="true" aria-controls="lolLeaderboard">
+                            League of Legends
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="lolLeaderboard" class="collapse" aria-labelledby="headingLoL" data-parent="#leaderboardAccordion">
+                    <div class="card-body">
+
+                        <!-- Nested Accordion for Teams -->
+                        <div class="accordion" id="lolAccordion">
+                            <!-- Team 1 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#lol-team-1" aria-expanded="false" aria-controls="lol-team-1">
+                                    Team Alpha - 500 Points
+                                </button>
+                                <div id="lol-team-1" class="collapse" data-parent="#lolAccordion">
+                                    <p>Team Alpha is a top-performing team in the League of Legends scene!</p>
+                                </div>
+                            </div>
+                            <!-- Team 2 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#lol-team-2" aria-expanded="false" aria-controls="lol-team-2">
+                                    Team Beta - 450 Points
+                                </button>
+                                <div id="lol-team-2" class="collapse" data-parent="#lolAccordion">
+                                    <p>Team Beta is known for their aggressive gameplay!</p>
+                                </div>
+                            </div>
+                            <!-- Team 3 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#lol-team-3" aria-expanded="false" aria-controls="lol-team-3">
+                                    Team Gamma - 430 Points
+                                </button>
+                                <div id="lol-team-3" class="collapse" data-parent="#lolAccordion">
+                                    <p>Team Gamma focuses on strategic map control!</p>
+                                </div>
+                            </div>
+                            <!-- Team 4 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#lol-team-4" aria-expanded="false" aria-controls="lol-team-4">
+                                    Team Delta - 400 Points
+                                </button>
+                                <div id="lol-team-4" class="collapse" data-parent="#lolAccordion">
+                                    <p>Team Delta is famous for their coordination in team fights!</p>
+                                </div>
+                            </div>
+                            <!-- Team 5 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#lol-team-5" aria-expanded="false" aria-controls="lol-team-5">
+                                    Team Epsilon - 380 Points
+                                </button>
+                                <div id="lol-team-5" class="collapse" data-parent="#lolAccordion">
+                                    <p>Team Epsilon is known for their quick rotations and objective control!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
 
-<!-- Leaderboard Section with Bootstrap Cards -->
+        <!-- Valorant -->
 
-<section class="leaderboard" id="leaderboard">
-    <h2>Current Rankings</h2>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Leaderboard</h5>
-            <ul>
-                <li>1. Team Alpha - 500 Points</li>
-                <li>2. Team Beta - 450 Points</li>
-                <li>3. Team Omega - 400 Points</li>
-                <li>4. Team Gamma - 350 Points</li>
-            </ul>
+        <div class="game-leaderboard mt-4">
+            <div class="card">
+                <div class="card-header" id="headingValorant">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#valorantLeaderboard" aria-expanded="false" aria-controls="valorantLeaderboard">
+                            Valorant
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="valorantLeaderboard" class="collapse" aria-labelledby="headingValorant" data-parent="#leaderboardAccordion">
+                    <div class="card-body">
+
+                        <!-- Nested Accordion for Teams -->
+                        <div class="accordion" id="valorantAccordion">
+
+                            <!-- Team 1 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#valorant-team-1" aria-expanded="false" aria-controls="valorant-team-1">
+                                    Team Omega - 400 Points
+                                </button>
+                                <div id="valorant-team-1" class="collapse" data-parent="#valorantAccordion">
+                                    <p>Team Omega is known for its aggressive plays and fast rotations!</p>
+                                </div>
+                            </div>
+
+                            <!-- Team 2 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#valorant-team-2" aria-expanded="false" aria-controls="valorant-team-2">
+                                    Team Sigma - 380 Points
+                                </button>
+                                <div id="valorant-team-2" class="collapse" data-parent="#valorantAccordion">
+                                    <p>Team Sigma excels in strategic play and perfect timing!</p>
+                                </div>
+                            </div>
+
+                            <!-- Team 3 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#valorant-team-3" aria-expanded="false" aria-controls="valorant-team-3">
+                                    Team Zeta - 360 Points
+                                </button>
+                                <div id="valorant-team-3" class="collapse" data-parent="#valorantAccordion">
+                                    <p>Team Zeta is known for their sharp aim and quick decision-making!</p>
+                                </div>
+                            </div>
+
+                            <!-- Team 4 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#valorant-team-4" aria-expanded="false" aria-controls="valorant-team-4">
+                                    Team Theta - 350 Points
+                                </button>
+                                <div id="valorant-team-4" class="collapse" data-parent="#valorantAccordion">
+                                    <p>Team Theta is a versatile team capable of adapting to any situation!</p>
+                                </div>
+                            </div>
+
+                            <!-- Team 5 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#valorant-team-5" aria-expanded="false" aria-controls="valorant-team-5">
+                                    Team Iota - 340 Points
+                                </button>
+                                <div id="valorant-team-5" class="collapse" data-parent="#valorantAccordion">
+                                    <p>Team Iota specializes in eco-rounds and smart plays!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Rocket League -->
+
+        <div class="game-leaderboard mt-4">
+            <div class="card">
+                <div class="card-header" id="headingRocketLeague">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#rocketLeagueLeaderboard" aria-expanded="false" aria-controls="rocketLeagueLeaderboard">
+                            Rocket League
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="rocketLeagueLeaderboard" class="collapse" aria-labelledby="headingRocketLeague" data-parent="#leaderboardAccordion">
+                    <div class="card-body">
+
+                        <!-- Nested Accordion for Teams -->
+                        <div class="accordion" id="rocketLeagueAccordion">
+
+                            <!-- Team 1 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#rocket-league-team-1" aria-expanded="false" aria-controls="rocket-league-team-1">
+                                    Team Phoenix - 450 Points
+                                </button>
+                                <div id="rocket-league-team-1" class="collapse" data-parent="#rocketLeagueAccordion">
+                                    <p>Team Phoenix is known for their speed and precision on the field!</p>
+                                </div>
+                            </div>
+
+                            <!-- Team 2 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#rocket-league-team-2" aria-expanded="false" aria-controls="rocket-league-team-2">
+                                    Team Inferno - 430 Points
+                                </button>
+                                <div id="rocket-league-team-2" class="collapse" data-parent="#rocketLeagueAccordion">
+                                    <p>Team Inferno specializes in aerial plays and fast breaks!</p>
+                                </div>
+                            </div>
+
+                            <!-- Team 3 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#rocket-league-team-3" aria-expanded="false" aria-controls="rocket-league-team-3">
+                                    Team Blizzard - 410 Points
+                                </button>
+                                <div id="rocket-league-team-3" class="collapse" data-parent="#rocketLeagueAccordion">
+                                    <p>Team Blizzard is known for their strong defensive setups!</p>
+                                </div>
+                            </div>
+
+                            <!-- Team 4 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#rocket-league-team-4" aria-expanded="false" aria-controls="rocket-league-team-4">
+                                    Team Avalanche - 400 Points
+                                </button>
+                                <div id="rocket-league-team-4" class="collapse" data-parent="#rocketLeagueAccordion">
+                                    <p>Team Avalanche is recognized for their coordination and team plays!</p>
+                                </div>
+                            </div>
+
+                            <!-- Team 5 -->
+                            <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#rocket-league-team-5" aria-expanded="false" aria-controls="rocket-league-team-5">
+                                    Team Thunder - 410 Points
+                                </button>
+                                <div id="rocket-league-team-5" class="collapse" data-parent="#rocketLeagueAccordion">
+                                    <p>Team Thunder focuses on quick counter-attacks and fast rotations!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fortnite -->
+        
+        <div class="game-leaderboard mt-4">
+            <div class="card">
+                <div class="card-header" id="headingFortnite">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#fortniteLeaderboard" aria-expanded="false" aria-controls="fortniteLeaderboard">
+                                Fortnite
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="fortniteLeaderboard" class="collapse" aria-labelledby="headingFortnite" data-parent="#leaderboardAccordion">
+                        <div class="card-body">
+
+                            <!-- Nested Accordion for Teams -->
+                            <div class="accordion" id="fortniteAccordion">
+
+                                <!-- Team 1 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#fortnite-team-1" aria-expanded="false" aria-controls="fortnite-team-1">
+                                        Team Victory - 650 Points
+                                    </button>
+                                    <div id="fortnite-team-1" class="collapse" data-parent="#fortniteAccordion">
+                                        <p>Team Victory dominates the battlefield with precise shooting!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 2 -->
+                                <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#fortnite-team-2" aria-expanded="false" aria-controls="fortnite-team-2">
+                                        Team Storm - 620 Points
+                                    </button>
+                                    <div id="fortnite-team-2" class="collapse" data-parent="#fortniteAccordion">
+                                        <p>Team Storm excels at building and rapid-fire tactics!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 3 -->
+                                <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#fortnite-team-3" aria-expanded="false" aria-controls="fortnite-team-3">
+                                        Team Blitz - 600 Points
+                                    </button>
+                                    <div id="fortnite-team-3" class="collapse" data-parent="#fortniteAccordion">
+                                        <p>Team Blitz is known for fast eliminations and aggressive plays!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 4 -->
+                                <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#fortnite-team-4" aria-expanded="false" aria-controls="fortnite-team-4">
+                                        Team Galaxy - 580 Points
+                                    </button>
+                                    <div id="fortnite-team-4" class="collapse" data-parent="#fortniteAccordion">
+                                        <p>Team Galaxy has a unique strategy of surprise attacks from the high ground!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 5 -->
+                                <div class="list-group-item">
+                                <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#fortnite-team-5" aria-expanded="false" aria-controls="fortnite-team-5">
+                                        Team Thunder - 550 Points
+                                    </button>
+                                    <div id="fortnite-team-5" class="collapse" data-parent="#fortniteAccordion">
+                                        <p>Team Thunder thrives with perfect timing and tactical retreats!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dead by Daylight (DBD) -->
+
+            <div class="game-leaderboard mt-4">
+                <div class="card">
+                    <div class="card-header" id="headingDBD">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#dbdLeaderboard" aria-expanded="false" aria-controls="dbdLeaderboard">
+                                Dead by Daylight
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="dbdLeaderboard" class="collapse" aria-labelledby="headingDBD" data-parent="#leaderboardAccordion">
+                        <div class="card-body">
+
+                            <!-- Nested Accordion for Teams -->
+                            <div class="accordion" id="dbdAccordion">
+
+                                <!-- Team 1 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dbd-team-1" aria-expanded="false" aria-controls="dbd-team-1">
+                                        Team Shivers - 700 Points
+                                    </button>
+                                    <div id="dbd-team-1" class="collapse" data-parent="#dbdAccordion">
+                                        <p>Team Shivers is known for their stealthy killer plays!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 2 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dbd-team-2" aria-expanded="false" aria-controls="dbd-team-2">
+                                        Team Nightmares - 680 Points
+                                    </button>
+                                    <div id="dbd-team-2" class="collapse" data-parent="#dbdAccordion">
+                                        <p>Team Nightmares specializes in strategic traps and ambushes!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 3 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dbd-team-3" aria-expanded="false" aria-controls="dbd-team-3">
+                                        Team Echo - 660 Points
+                                    </button>
+                                    <div id="dbd-team-3" class="collapse" data-parent="#dbdAccordion">
+                                        <p>Team Echo utilizes efficient teamwork to outsmart survivors!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 4 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dbd-team-4" aria-expanded="false" aria-controls="dbd-team-4">
+                                        Team Wraith - 640 Points
+                                    </button>
+                                    <div id="dbd-team-4" class="collapse" data-parent="#dbdAccordion">
+                                        <p>Team Wraith is skilled at evading detection and striking fast!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 5 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dbd-team-5" aria-expanded="false" aria-controls="dbd-team-5">
+                                        Team Terror - 620 Points
+                                    </button>
+                                    <div id="dbd-team-5" class="collapse" data-parent="#dbdAccordion">
+                                        <p>Team Terror strikes fear into survivors with unexpected attacks!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dota 2 -->
+
+            <div class="game-leaderboard mt-4">
+                <div class="card">
+                    <div class="card-header" id="headingDota2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#dota2Leaderboard" aria-expanded="false" aria-controls="dota2Leaderboard">
+                                Dota 2
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="dota2Leaderboard" class="collapse" aria-labelledby="headingDota2" data-parent="#leaderboardAccordion">
+                        <div class="card-body">
+
+                            <!-- Nested Accordion for Teams -->
+                            <div class="accordion" id="dota2Accordion">
+                            
+                                <!-- Team 1 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dota2-team-1" aria-expanded="false" aria-controls="dota2-team-1">
+                                        Team Immortals - 750 Points
+                                    </button>
+                                    <div id="dota2-team-1" class="collapse" data-parent="#dota2Accordion">                                  
+                                        <p>Team Immortals is famous for their flawless coordination and ultimate strategies!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 2 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dota2-team-2" aria-expanded="false" aria-controls="dota2-team-2">
+                                        Team Dynasty - 730 Points
+                                    </button>
+                                    <div id="dota2-team-2" class="collapse" data-parent="#dota2Accordion">  
+                                        <p>Team Dynasty excels in lane control and smart rotations!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 3 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dota2-team-3" aria-expanded="false" aria-controls="dota2-team-3">
+                                        Team Titans - 710 Points
+                                    </button>
+                                    <div id="dota2-team-3" class="collapse" data-parent="#dota2Accordion">  
+                                        <p>Team Titans is known for aggressive ganks and outsmarting their opponents!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 4 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dota2-team-4" aria-expanded="false" aria-controls="dota2-team-4">
+                                        Team Thunder - 690 Points
+                                    </button>
+                                    <div id="dota2-team-4" class="collapse" data-parent="#dota2Accordion">  
+                                        <p>Team Thunder relies on precise skill execution and map awareness!</p>
+                                    </div>
+                                </div>
+
+                                <!-- Team 5 -->
+                                <div class="list-group-item">
+                                    <button class="team-button btn btn-primary" data-toggle="collapse" data-target="#dota2-team-5" aria-expanded="false" aria-controls="dota2-team-5">
+                                        Team Phoenix - 670 Points
+                                    </button>
+                                    <div id="dota2-team-5" class="collapse" data-parent="#dota2Accordion">  
+                                        <p>Team Phoenix excels at team fights and finding crucial pick-offs!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
     </div>
-</section>
+</div>
 
 <!-- Upcoming Tournaments Section with Bootstrap Cards -->
 

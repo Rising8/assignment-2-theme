@@ -41,7 +41,7 @@
                         <a class="nav-link" href="<?php echo home_url(); ?>#live-streams">Live Streams</a>
                     </li>
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
-                        <a class="nav-link" href="<?php echo home_url(); ?>#leaderboard">Leaderboard</a>
+                        <a class="nav-link" href="<?php echo home_url(); ?>#game-leaderboard">Leaderboard</a>
                     </li>
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
                         <a class="nav-link" href="<?php echo home_url(); ?>#upcoming-tournaments">Upcoming Tournaments</a>
