@@ -38,13 +38,13 @@
                         <a class="nav-link" href="<?php echo home_url(); ?>#home">Home</a>
                     </li>
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
-                        <a class="nav-link" href="<?php echo home_url(); ?>#live-streams">Live Streams</a>
-                    </li>
-                    <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
                         <a class="nav-link" href="<?php echo home_url(); ?>#game-leaderboard">Leaderboard</a>
                     </li>
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
-                        <a class="nav-link" href="<?php echo home_url(); ?>#upcoming-tournaments">Upcoming Tournaments</a>
+                        <a class="nav-link" href="<?php echo home_url(); ?>#upcoming-tournaments">Tournaments</a>
+                    </li>
+                    <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
+                        <a class="nav-link" href="<?php echo home_url(); ?>#live-streams">Live Streams</a>
                     </li>
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
                         <a class="nav-link" href="<?php echo home_url(); ?>#follow-us">Follow Us</a>

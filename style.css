@@ -99,45 +99,93 @@ header, footer
 
 /* === Live Streams Section with Bootstrap Cards === */
 
-.live-streams .card 
+.live-streams-section 
 {
-    background: #1a1a1a;
+    padding: 40px 0;
+    background: #121212; 
+    text-align: center;
+}
+
+.live-streams-section .card 
+{
+    background: #1e1e1e;
     color: #ffffff;
-    border: 1px solid #00ffcc;
+    border: 1px solid #00bcd4;
     border-radius: 8px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
 }
 
-.live-streams .card-body 
+.live-streams-section .card:hover 
 {
-    background: #333;
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 12px rgba(0, 188, 212, 0.4);
+}
+
+.live-streams-section .card-body 
+{
+    background: #252525;
     padding: 20px;
+    flex-grow: 1;
 }
 
-.live-streams .card-title 
+.live-streams-section .card-title 
 {
-    font-size: 24px;
-    color: #00ffcc;
-    text-transform: uppercase;
+    font-size: 22px;
+    color: #00bcd4; /* Softer cyan */
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.live-streams .card-text 
+.live-streams-section .card-text 
 {
-    font-size: 18px;
-    color: #cf0a0a;
+    font-size: 16px;
+    color: #d1d1d1; /* Light gray for better readability */
 }
 
 /* === Live Streams Section Header === */
 
-.live-streams h2 
+.live-streams-section h2 
 {
     font-size: 36px; 
     color: #ffffff; 
     font-weight: bold; 
     text-transform: uppercase; 
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); 
+    text-shadow: 2px 2px 6px rgba(0, 188, 212, 0.4); 
     margin-bottom: 20px; 
 }
+
+/* Twitch Iframe Styling */
+
+.live-streams-section iframe 
+{
+    border-radius: 8px;
+    border: none;
+}
+
+
+/* Updated Button */
+
+.live-streams-section .btn-primary 
+{
+    background: #00bcd4;
+    border: none;
+    color: #121212;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.live-streams-section .btn-primary:hover 
+{
+    background: #0097a7;
+    transform: scale(1.05);
+}
+
 
 /* === Leaderboard Section with Bootstrap Cards === */
 
