@@ -509,28 +509,71 @@ header, footer
     margin-bottom: 20px;
 }
 
-/* === Footer Styling === */
+/* === Footer Styling with focus on Typography === */
 
 footer 
 {
-    background: linear-gradient(to right, #00ffcc, #ff0044);
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     color: #ffffff;
     margin-top: 40px;
 }
 
-footer ul 
+footer h5 
 {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; 
+    font-size: clamp(20px, 2vw, 24px); /* Responsive font size */
+    margin-bottom: 10px;
+    color: #ff0044; 
+    text-transform: uppercase;
 }
 
-footer li 
+footer p 
 {
-    display: inline-block; 
-    margin: 0 10px; 
+    font-size: clamp(14px, 1.8vw, 16px); /* Responsive font size */
+    color: #ffffff;
+}
+
+footer .social-icons a 
+{
+    color: #ffffff;
+    font-size: 30px;
+    margin-right: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover 
+{
+    color: #ff0044; 
+    transform: scale(1.1);
+}
+
+.sponsor-logos 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Reduced from 40px */
+    margin-top: 20px;
+}
+
+.sponsor-item 
+{
+    padding: 10px;
+    cursor: pointer; 
+}
+
+.sponsor-img 
+{
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-item:hover .sponsor-img 
+{
+    transform: scale(1.05);
+    filter: brightness(1.2); /* Subtle brightness effect on hover */
 }
 
 /* === NavBar Styling === */

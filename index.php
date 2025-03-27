@@ -652,6 +652,8 @@
                 <li><a href="https://facebook.com/esportsarena" target="_blank" class="social-icon facebook">Facebook</a></li>
                 <li><a href="https://twitter.com/esportsarena" target="_blank" class="social-icon twitter">Twitter</a></li>
                 <li><a href="https://instagram.com/esportsarena" target="_blank" class="social-icon instagram">Instagram</a></li>
+                <li><a href="https://youtube.com/esportsarena" target="_blank" class="social-icon youtube">YouTube</a></li>
+                <li><a href="https://discord.gg/esportsarena" target="_blank" class="social-icon discord">Discord</a></li>
             </ul>
         </div>
     </div>
