@@ -95,7 +95,6 @@
 <!-- Includes Font Awesome for Social Icons -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
-
 <script>
     // Javacscript function to handle the fake form submission from above
     function handleFormSubmit() 

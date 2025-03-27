@@ -661,7 +661,7 @@
 
 <!-- Posts Section -->
  
-<section class="posts-section">
+<section id="latest-posts" class="posts-section">
     <h2>Latest Posts</h2>
     <?php if (have_posts()) : ?>
         <?php if (is_search()) : ?>

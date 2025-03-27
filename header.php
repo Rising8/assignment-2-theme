@@ -49,6 +49,9 @@
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
                         <a class="nav-link" href="<?php echo home_url(); ?>#follow-us">Follow Us</a>
                     </li>
+                    <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
+                        <a class="nav-link" href="<?php echo home_url(); ?>#latest-posts">Latest Posts</a>
+                    </li>
                 </ul>
 
                 <!-- Search Bar -->

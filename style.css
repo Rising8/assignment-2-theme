@@ -759,8 +759,16 @@ footer .social-icons a:hover
 }
 
 /* Neon glow effect on hover */
+
 .quote_of_the_day:hover 
 {
     box-shadow: 0 0 10px 2px rgba(0, 255, 0, 1); /* Intensifies neon glow */
     background-color: rgba(0, 0, 0, 1); 
+}
+
+/* Ensures smooth scrolling for anchor links for a better UX */ 
+
+html 
+{
+    scroll-behavior: smooth;
 }
