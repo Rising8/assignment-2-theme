@@ -64,6 +64,7 @@
                 </ul>
 
                 <!-- Search Bar -->
+
                 <form class="search-form form-inline my-2 my-lg-0 ml-3" action="<?php echo home_url('/'); ?>" method="get">
                     <input class="form-control search-input mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="s">
                     <button class="search-btn btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
