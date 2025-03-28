@@ -44,6 +44,9 @@
                         <a class="nav-link" href="<?php echo home_url(); ?>#home">Home</a>
                     </li>
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
+                        <a class="nav-link" href="<?php echo home_url(); ?>#about">About</a>
+                    </li>
+                    <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
                         <a class="nav-link" href="<?php echo home_url(); ?>#game-leaderboard">Leaderboard</a>
                     </li>
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">

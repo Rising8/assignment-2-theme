@@ -10,7 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: esports-arena
 */
 
-
 /* === General Styling === */
 
 body 
@@ -67,13 +66,6 @@ header, footer
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
-.arena p 
-{
-    font-size: 20px;
-    color: #02ec73;
-    font-weight: bold;
-}
-
 /* === Buttons === */
 
 .button 
@@ -97,7 +89,144 @@ header, footer
     box-shadow: 0 0 10px #00ffcc;
 }
 
-/* === Live Streams Section with Bootstrap Cards === */
+/* === About Section Styling === */
+
+/* General Section Styling */
+
+.about-us 
+{
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+/* Heading - About Esports Arena */
+
+.about-us h2 
+{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00d4ff; /* Neon cyan color */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 212, 255, 0.8); /* Glowing effect */
+}
+
+/* Subheading - What we offer/Why choose esports arena */
+
+.about-us h3 
+{
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff5c5c; /* Neon red color */
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Paragraph Text */
+
+.about-us p 
+{
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #dcdcdc;
+}
+
+/* List Items */
+
+.about-us ul 
+{
+    list-style: none;
+    padding: 0;
+}
+
+.about-us ul li 
+{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #00ff00; /* Neon green color */
+    text-shadow: 1px 1px 3px rgba(0, 255, 0, 0.5);
+}
+
+.about-us ul li strong 
+{
+    color: #ff8c00; /* Accent orange */
+    font-weight: bold;
+}
+
+/* Button or Call to Action */
+
+.about-us .cta-btn 
+{
+    background-color: #ff5c5c;
+    color: #fff;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.about-us .cta-btn:hover 
+{
+    background-color: #ff0000; /* Darker red when hovered */
+}
+
+/* Container */
+
+.about-us .container 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Background with a Gradient */
+
+.about-us::before 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.7), rgba(0, 255, 255, 0.7));
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Section for responsiveness */
+
+@media (max-width: 768px) {
+    .about-us h2 {
+        font-size: 2em;
+    }
+
+    .about-us h3 {
+        font-size: 1.6em;
+    }
+
+    .about-us p {
+        font-size: 1em;
+    }
+
+    .about-us .cta-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* === Live Streams Section Styling with Bootstrap Cards === */
 
 .live-streams-section 
 {
