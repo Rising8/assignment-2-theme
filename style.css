@@ -21,6 +21,13 @@ body
     padding: 0;
 }
 
+/* Ensuring smooth scrolling for anchor links for a better UX */ 
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
 /* === Header Styling === */
 
 header 
@@ -35,19 +42,152 @@ header, footer
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.site-title a 
+/* === NavBar Styling === */
+
+/* Navbar Styling */
+
+.navbar 
 {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: bold;
+    background-color: #111; /* Dark background for the navbar */
+}
+
+.navbar-nav .nav-link 
+{
+    color: #fff; /* Light text for links */
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav 
+{
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 30px; /* Add space between links */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active 
+{
+    color: #00ffcc !important; /* Highlight active/hovered links - This is important to override the .navbar-nav .nav-link color: #fff */
+    background-color: #333; 
+}
+
+.navbar-toggler-icon 
+{
+    background-color: #fff; /* Changes color of the mobile toggle icon */
+}
+
+/* Search Bar Styling */
+
+.search-form 
+{
+    display: flex;
+    align-items: center;
+}
+
+/* Input Field Styling */
+
+.search-form input.form-control 
+{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    width: 180px;
+}
+
+/* Search Button Styling */
+
+.search-form button.btn 
+{
+    background-color: #ff0044; 
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 8px 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.search-form button.btn:hover 
+{
+    background-color: #00ffcc; /* Changes button color on hover */
+}
+
+/* Style for the button when it's active/focused */
+
+.search-form button.btn:active 
+{
+    background-color: #ff0022;
+    box-shadow: 0 0 5px rgba(255, 0, 34, 0.5);
+}
+
+/* Responsive Fixes */
+
+@media (max-width: 768px)
+{
+    .search-form
+    {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-form .form-control
+    {
+        width: 100%;
+    }
+
+    .search-form .btn
+    {
+        width: 100%;
+    }
+}
+
+/* Styling for no results found message */
+
+.search-results h2 
+{
+    font-size: 2em; 
+    font-weight: bold; 
+    color: #00ffcc;
+    margin-top: 30px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.site-description 
+.search-results 
 {
-    color: #ddd;
-    font-size: 14px;
+    padding: 20px;
+    background-color: #1a1a1a; 
+    border-left: 5px solid #00ffcc; 
+    border-radius: 5px; /* Slight rounding on the corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.no-results
+{
+    background-color: #f8d7da; 
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 20px;
+    font-size: 1.4em; 
+    text-align: center; 
+    margin-top: 20px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.no-results p 
+{
+    margin: 0; /* Removes default paragraph margin */
 }
 
 /* === Dynamic Background Section === */
@@ -66,27 +206,44 @@ header, footer
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* === Buttons === */
+/* === Quote of the Day Styling === */
 
-.button 
+.quote_of_the_day 
 {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 18px;
-    color: #fff;
-    background: #ff0044;
-    border: 2px solid #00ffcc;
-    border-radius: 5px;
-    transition: 0.3s;
-    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3); 
+    color: #00ff00;
+    font-family: 'Roboto', sans-serif; /* Roboto font */
+    text-align: center; 
+    max-width: 400px; 
+    margin: 20px auto;
 }
 
-.button:hover 
+.quote_of_the_day h3 
 {
-    background: #00ffcc;
-    color: #000;
-    box-shadow: 0 0 10px #00ffcc;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.quote_of_the_day p 
+{
+    font-style: italic;
+    font-size: 1.2em;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+/* Neon glow effect on hover */
+
+.quote_of_the_day:hover 
+{
+    box-shadow: 0 0 10px 2px rgba(0, 255, 0, 1); /* Intensifies neon glow */
+    background-color: rgba(0, 0, 0, 1); 
 }
 
 /* === About Section Styling === */
@@ -159,7 +316,7 @@ header, footer
     font-weight: bold;
 }
 
-/* Button or Call to Action */
+/* Explore More - Call to Action */
 
 .about-us .cta-btn 
 {
@@ -181,16 +338,7 @@ header, footer
     background-color: #ff0000; /* Darker red when hovered */
 }
 
-/* Container */
-
-.about-us .container 
-{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Section Background with a Gradient */
+/* About Section Background with a Gradient */
 
 .about-us::before 
 {
@@ -225,96 +373,6 @@ header, footer
         padding: 10px 20px;
     }
 }
-
-/* === Live Streams Section Styling with Bootstrap Cards === */
-
-.live-streams-section 
-{
-    padding: 40px 0;
-    background: #121212; 
-    text-align: center;
-}
-
-.live-streams-section .card 
-{
-    background: #1e1e1e;
-    color: #ffffff;
-    border: 1px solid #00bcd4;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
-}
-
-.live-streams-section .card:hover 
-{
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 12px rgba(0, 188, 212, 0.4);
-}
-
-.live-streams-section .card-body 
-{
-    background: #252525;
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.live-streams-section .card-title 
-{
-    font-size: 22px;
-    color: #00bcd4; /* Softer cyan */
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.live-streams-section .card-text 
-{
-    font-size: 16px;
-    color: #d1d1d1; /* Light gray for better readability */
-}
-
-/* === Live Streams Section Header === */
-
-.live-streams-section h2 
-{
-    font-size: 36px; 
-    color: #ffffff; 
-    font-weight: bold; 
-    text-transform: uppercase; 
-    text-shadow: 2px 2px 6px rgba(0, 188, 212, 0.4); 
-    margin-bottom: 20px; 
-}
-
-/* Twitch Iframe Styling */
-
-.live-streams-section iframe 
-{
-    border-radius: 8px;
-    border: none;
-}
-
-
-/* Updated Button */
-
-.live-streams-section .btn-primary 
-{
-    background: #00bcd4;
-    border: none;
-    color: #121212;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 6px;
-    transition: background 0.3s ease-in-out, transform 0.2s;
-}
-
-.live-streams-section .btn-primary:hover 
-{
-    background: #0097a7;
-    transform: scale(1.05);
-}
-
 
 /* === Leaderboard Section with Bootstrap Cards === */
 
@@ -369,7 +427,7 @@ header, footer
     color: #ddd;
 }
 
-/* === Current Rankings Section Header === */
+/* Top Teams Section Header Styling*/
 
 .leaderboard-section h2 
 {
@@ -381,7 +439,7 @@ header, footer
     margin-bottom: 20px;
 }
 
-/* === Button Styling for Interactive Features === */
+/* Button Styling for Interactive Features */
 
 .leaderboard-section .btn 
 {
@@ -397,61 +455,18 @@ header, footer
 
 .leaderboard-section .btn:hover 
 {
-    background-color: #00a3cc;
-}
-
-/* === Team Description Styling === */
-
-.leaderboard-section .team-description 
-{
-    background-color: #444;
-    color: #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    font-size: 1rem;
-   
-}
-
-/* Description of team styling */
-
-.leaderboard-section .team-description p
-{
-    background-color: #2a3a73;
-    color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    font-size: 1rem;
-}
-
-.leaderboard-section .team-button 
-{
-    width: 100%;
-    text-align: left;
-    font-size: 1.1rem;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-/* === Hover Effect for List Items === */
-
-.leaderboard-section li:hover 
-{
-    background-color: #555;  /* Slightly lighter background on hover */
-    cursor: pointer;
+    background-color: #0069cc; /* Darker blue when hovered */
 }
 
 /* === Upcoming Tournaments Section === */
 
 .upcoming-tournaments 
 {
-    background: #222;
+    background: #181818;
     padding: 40px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.2);
 }
 
 /* Styling for Tournament List */
@@ -465,14 +480,14 @@ header, footer
 
 .upcoming-tournaments h2 
 {
-    color: #ffcc00;
+    color: #00ff99;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .upcoming-tournaments h5
 {
-    color: #ff4500;
+    color: #ff0066;
     font-size: 2rem;
 }
 
@@ -487,9 +502,10 @@ header, footer
 .upcoming-tournaments li a
 {
     display: block;
-    color: #ffffff;
     text-decoration: none;
     font-size: 1.2rem;
+    background-color: #222222;
+    color: #fff;
     font-weight: bold;
     padding: 12px 20px;
     background-color: #333;
@@ -501,7 +517,7 @@ header, footer
 
 .upcoming-tournaments li a:hover
 {
-    background-color: #00ffcc;
+    background-color: #ff3366;
     transform: scale(1.05);
 }
 
@@ -509,10 +525,10 @@ header, footer
 
 .card-body
 {
-    background-color: #444;
+    background-color: #222222;
     padding: 20px;
     border-radius: 5px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .card-body p
@@ -534,20 +550,6 @@ header, footer
 .collapse
 {
     transition: max-height 0.3s ease-in-out;
-}
-
-/* Styling for Card Border */
-
-.card
-{
-    border: 1px solid #444;
-    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
-}
-
-.card-header 
-{
-    background-color: #333;
-    color: #ffffff;
 }
 
 /* Mobile Responsiveness */
@@ -579,6 +581,94 @@ header, footer
     {
         padding: 15px;
     }
+}
+
+/* === Live Streams Section Styling with Bootstrap Cards === */
+
+.live-streams-section 
+{
+    padding: 40px 0;
+    background: #121212; 
+    text-align: center;
+}
+
+.live-streams-section .card 
+{
+    background: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #00bcd4;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+}
+
+.live-streams-section .card:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 12px rgba(0, 188, 212, 0.4);
+}
+
+.live-streams-section .card-body 
+{
+    background: #252525;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.live-streams-section .card-title 
+{
+    font-size: 22px;
+    color: #00bcd4; /* Softer cyan */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.live-streams-section .card-text 
+{
+    font-size: 16px;
+    color: #d1d1d1;
+}
+
+/* Live Streams Section Header */
+
+.live-streams-section h2 
+{
+    font-size: 36px; 
+    color: #ffffff; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 6px rgba(0, 188, 212, 0.4); 
+    margin-bottom: 20px; 
+}
+
+/* Twitch Iframe Styling */
+
+.live-streams-section iframe 
+{
+    border-radius: 8px;
+    border: none;
+}
+
+/* Live Streams Watch on Twitch Button */
+
+.live-streams-section .btn-primary 
+{
+    background: #00bcd4;
+    border: none;
+    color: #121212;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.live-streams-section .btn-primary:hover 
+{
+    background: #0097a7;
+    transform: scale(1.05);
 }
 
 /* === Social Media Section with Bootstrap Cards === */
@@ -626,7 +716,7 @@ header, footer
     text-shadow: 0 0 10px #ff0044;
 }
 
-/* === Social Media Section Header === */
+/* Social Media Section Header */
 
 .social-media h2 
 {
@@ -636,6 +726,85 @@ header, footer
     text-transform: uppercase;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
+}
+
+/* === Posts Styling === */
+
+.posts-section h2 
+{
+    color: #ff4500; 
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.posts .post-item 
+{
+    background: #222;
+    color: #fff; 
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.posts .post-item h3 a 
+{
+    color: #ff4500;
+    text-decoration: none;
+}
+
+.posts .post-item h3 a:hover 
+{
+    text-decoration: underline;
+}
+
+/* Testimonials Section Styling */
+
+.testimonials-section 
+{
+    background: linear-gradient(to right, #111, #222); 
+    padding: 40px 0;
+    text-align: center;
+    color: white; /* Makes text readable on dark background */
+}
+
+/* Cool esports-style glow */
+
+.carousel-item .testimonial-item 
+{
+    background-color: rgba(20, 20, 20, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon blue glow border */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item .testimonial-item p 
+{
+    color: #ddd;
+}
+
+.carousel-item .testimonial-item h4 
+{
+    color: #ff4444; /* Reddish esports vibe */
+}
+
+.testimonials-section h2 
+{
+    font-family: 'Orbitron', sans-serif; /* Gaming font implementation */
+    text-transform: uppercase;
+    color: #ff3366;
+    letter-spacing: 2px;
+}
+
+.carousel-item .testimonial-item .stars
+{
+    color: #ffcc00; /* Yellow stars */
 }
 
 /* === Footer Styling with focus on Typography === */
@@ -650,7 +819,7 @@ footer
 
 footer h5 
 {
-    font-size: clamp(20px, 2vw, 24px); /* Responsive font size */
+    font-size: clamp(20px, 2vw, 24px); /* Responsive font size (with clamp) */
     margin-bottom: 10px;
     color: #ff0044; 
     text-transform: uppercase;
@@ -658,7 +827,7 @@ footer h5
 
 footer p 
 {
-    font-size: clamp(14px, 1.8vw, 16px); /* Responsive font size */
+    font-size: clamp(14px, 1.8vw, 16px); /* Responsive font size (with clamp) */
     color: #ffffff;
 }
 
@@ -682,7 +851,7 @@ footer .social-icons a:hover
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 30px; /* Reduced from 40px */
+    gap: 30px;
     margin-top: 20px;
 }
 
@@ -703,288 +872,4 @@ footer .social-icons a:hover
 {
     transform: scale(1.05);
     filter: brightness(1.2); /* Subtle brightness effect on hover */
-}
-
-/* === NavBar Styling === */
-
-/* Navbar Styling */
-
-.navbar 
-{
-    background-color: #111; /* Dark background for the navbar */
-}
-
-.navbar-nav .nav-link 
-{
-    color: #fff; /* Light text for links */
-    font-size: 18px;
-    padding: 10px 20px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar-nav 
-{
-    align-items: center;
-}
-
-.navbar-nav .nav-item {
-    margin-left: 30px; /* Add space between links */
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active 
-{
-    color: #00ffcc !important; /* Highlight active/hovered links - This is important to override the .navbar-nav .nav-link color: #fff */
-    background-color: #333; /* Add a background color on hover */
-}
-
-.navbar-toggler-icon 
-{
-    background-color: #fff; /* Change color of the mobile toggle icon */
-}
-
-/* Search Bar Styling */
-
-.search-form 
-{
-    display: flex;
-    align-items: center;
-}
-
-/* Input Field Styling */
-
-.search-form input.form-control 
-{
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-    transition: all 0.3s ease;
-    width: 180px;
-}
-
-/* Focus Effect */
-
-.search-form input.form-control:focus 
-{
-    outline: none;
-    border-color: #ff0044;
-    box-shadow: 0 0 5px rgba(255, 0, 68, 0.5);
-}
-
-/* Search Button Styling */
-
-.search-form button.btn 
-{
-    background-color: #ff0044; 
-    color: #fff;
-    border-radius: 20px;
-    border: none;
-    padding: 8px 20px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.search-form button.btn:hover 
-{
-    background-color: #00ffcc; /* Changes button color on hover */
-}
-
-/* Style for the button when it's active/focused */
-
-.search-form button.btn:active 
-{
-    background-color: #ff0022;
-    box-shadow: 0 0 5px rgba(255, 0, 34, 0.5);
-}
-
-/* Responsive Fixes */
-
-@media (max-width: 768px)
-{
-    .search-form
-    {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .search-form .form-control
-    {
-        width: 100%;
-    }
-
-    .search-form .btn
-    {
-        width: 100%;
-    }
-}
-
-/* Styling for no results found message */
-
-.search-results h2 
-{
-    font-size: 2em; /* Larger font size */
-    font-weight: bold; /* Bold for emphasis */
-    color: #00ffcc;
-    margin-top: 30px; 
-    margin-bottom: 20px; 
-    text-align: center; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.search-results 
-{
-    padding: 20px;
-    background-color: #1a1a1a; /* Dark background */
-    border-left: 5px solid #00ffcc; /* Add a color accent on the left */
-    border-radius: 5px; /* Slight rounding on the corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
-
-.no-results
-{
-    background-color: #f8d7da; /* Light red background */
-    color: #721c24; /* Dark red text color */
-    border: 1px solid #f5c6cb; /* Light red border */
-    padding: 20px;
-    font-size: 1.4em; 
-    text-align: center; 
-    margin-top: 20px; 
-    border-radius: 5px; 
-    font-weight: bold; /* Make the text bold for emphasis */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for better contrast */
-}
-
-.no-results p 
-{
-    margin: 0; /* Remove default paragraph margin */
-}
-
-/* Posts Styling */
-
-.posts-section h2 
-{
-    color: #ff4500; 
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.posts .post-item 
-{
-    background: #222; /* Dark background */
-    color: #fff; /* White text */
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.posts .post-item h3 a 
-{
-    color: #ff4500; /* Highlight post titles */
-    text-decoration: none;
-}
-
-.posts .post-item h3 a:hover {
-    text-decoration: underline;
-}
-
-/* Quote of the Day Styling */
-
-.quote_of_the_day 
-{
-    background-color: rgba(0, 0, 0, 0.8); 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.3); 
-    color: #00ff00;
-    font-family: 'Roboto', sans-serif; /* Roboto font */
-    text-align: center; 
-    max-width: 400px; 
-    margin: 20px auto;
-}
-
-.quote_of_the_day h3 
-{
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-}
-
-.quote_of_the_day p 
-{
-    font-style: italic;
-    font-size: 1.2em;
-    letter-spacing: 0.5px;
-    line-height: 1.4;
-}
-
-/* Neon glow effect on hover */
-
-.quote_of_the_day:hover 
-{
-    box-shadow: 0 0 10px 2px rgba(0, 255, 0, 1); /* Intensifies neon glow */
-    background-color: rgba(0, 0, 0, 1); 
-}
-
-/* Ensures smooth scrolling for anchor links for a better UX */ 
-
-html 
-{
-    scroll-behavior: smooth;
-}
-
-/* Testimonials Section Styling */
-
-/* Dark esports theme background */
-
-.testimonials-section 
-{
-    background: linear-gradient(to right, #111, #222); /* Dark gradient */
-    padding: 40px 0;
-    text-align: center;
-    color: white; /* Makes text readable on dark background */
-}
-
-/* Cool esports-style glow */
-
-.carousel-item .testimonial-item 
-{
-    background-color: rgba(20, 20, 20, 0.9); /* Dark background with slight transparency */
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon blue glow */
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.carousel-item .testimonial-item p 
-{
-    color: #ddd;
-}
-
-.carousel-item .testimonial-item h4 
-{
-    color: #ff4444; /* Reddish esports vibe */
-}
-
-.testimonials-section h2 
-{
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    color: #ff3366;
-    letter-spacing: 2px;
-}
-
-.carousel-item .testimonial-item .stars
-{
-    color: #ffcc00; /* Yellow stars */
 }
