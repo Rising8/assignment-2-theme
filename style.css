@@ -521,6 +521,21 @@ header, footer
     transform: scale(1.05);
 }
 
+/* Register Now Button Styling */
+
+.upcoming-tournaments .btn-register 
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #00ff99; /* Bright green for CTA button */
+    color: #000; /* Black text for contrast */
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 /* Styling for Collapsible Tournament Details */
 
 .card-body

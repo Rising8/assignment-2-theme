@@ -494,6 +494,8 @@
                             <p><strong>Prize Pool:</strong> $100,000</p>
                             <p><strong>Player Requirements:</strong> Players must be ranked in the top 100 of the global leaderboard to qualify.</p>
                             <p><strong>Registration Deadline:</strong> May 7, 2025</p>
+                            <!-- This link will not work, it is just a placeholder for now -->
+                            <a href="#register" class="btn btn-register">Register Now</a>
                         </div>
                     </div>
                 </li>
@@ -509,6 +511,8 @@
                             <p><strong>Prize Pool:</strong> $500,000</p>
                             <p><strong>Player Requirements:</strong> Players must be part of an accredited esports team or organization.</p>
                             <p><strong>Registration Deadline:</strong> June 1, 2025</p>
+                            <!-- This link will not work, it is just a placeholder for now -->
+                            <a href="#register" class="btn btn-register">Register Now</a>
                         </div>
                     </div>
                 </li>
@@ -524,6 +528,8 @@
                             <p><strong>Prize Pool:</strong> $750,000</p>
                             <p><strong>Player Requirements:</strong> Open to teams with at least five members from any esports discipline.</p>
                             <p><strong>Registration Deadline:</strong> July 15, 2025</p>
+                            <!-- This link will not work, it is just a placeholder for now -->
+                            <a href="#register" class="btn btn-register">Register Now</a>
                         </div>
                     </div>
                 </li>
@@ -539,6 +545,8 @@
                             <p><strong>Prize Pool:</strong> $2,000,000</p>
                             <p><strong>Player Requirements:</strong> Only the top 10 ranked teams in each game will qualify.</p>
                             <p><strong>Registration Deadline:</strong> September 10, 2025</p>
+                            <!-- This link will not work, it is just a placeholder for now -->
+                            <a href="#register" class="btn btn-register">Register Now</a>
                         </div>
                     </div>
                 </li>
@@ -770,6 +778,5 @@
         </a>
     </div>
 </section>
-
 
 <?php get_footer(); ?>
