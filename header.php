@@ -11,6 +11,12 @@
     <!-- Dynamic Title -->
     <title><?php bloginfo('name'); ?> <?php wp_title('|', true, 'left'); ?></title>
 
+    <!-- Google Fonts (Orbitron) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+
+    <!-- Font Awesome (CSS for Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Word Press Head Hook -->
     <?php wp_head(); ?>
 </head>
@@ -51,6 +57,9 @@
                     </li>
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
                         <a class="nav-link" href="<?php echo home_url(); ?>#latest-posts">Latest Posts</a>
+                    </li>
+                    <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
+                        <a class="nav-link" href="<?php echo home_url(); ?>#testimonials">Testimonials</a>
                     </li>
                 </ul>
 

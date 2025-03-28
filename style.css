@@ -587,16 +587,25 @@ footer .social-icons a:hover
 
 .navbar-nav .nav-link 
 {
-    color: #fff !important; /* Light text for links */
+    color: #fff; /* Light text for links */
     font-size: 18px;
     padding: 10px 20px;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+.navbar-nav 
+{
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 30px; /* Add space between links */
+}
+
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active 
 {
-    color: #00ffcc !important; /* Highlight active/hovered links */
+    color: #00ffcc !important; /* Highlight active/hovered links - This is important to override the .navbar-nav .nav-link color: #fff */
     background-color: #333; /* Add a background color on hover */
 }
 
@@ -771,4 +780,53 @@ footer .social-icons a:hover
 html 
 {
     scroll-behavior: smooth;
+}
+
+/* Testimonials Section Styling */
+
+/* Dark esports theme background */
+
+.testimonials-section 
+{
+    background: linear-gradient(to right, #111, #222); /* Dark gradient */
+    padding: 40px 0;
+    text-align: center;
+    color: white; /* Makes text readable on dark background */
+}
+
+/* Cool esports-style glow */
+
+.carousel-item .testimonial-item 
+{
+    background-color: rgba(20, 20, 20, 0.9); /* Dark background with slight transparency */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon blue glow */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item .testimonial-item p 
+{
+    color: #ddd;
+}
+
+.carousel-item .testimonial-item h4 
+{
+    color: #ff4444; /* Reddish esports vibe */
+}
+
+.testimonials-section h2 
+{
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #ff3366;
+    letter-spacing: 2px;
+}
+
+.carousel-item .testimonial-item .stars
+{
+    color: #ffcc00; /* Yellow stars */
 }
