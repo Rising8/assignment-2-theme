@@ -29,7 +29,7 @@ function force_esports_arena_title()
 } 
 add_action('after_switch_theme', 'force_esports_arena_title'); // Runs when theme is activated
 
-/* Custom Widget - Quote of the Day - Completely copied from my Assessment 1! */
+/* Custom Widget - Quote of the Day - Completely copied and pasted from my Assessment 1! */
 
 function quote_of_the_day() 
 {
@@ -49,5 +49,13 @@ function quote_of_the_day()
     echo '<p>"' . $random_quote . '"</p>';
     echo '</div>';
 }
+
+// Function to add a favicon - Code is copied from wordpress theme dev, just the picture link is different (a picture related to esports) //
+
+function add_favicon() 
+{
+	echo '<link rel="shortcut icon" type="image/x-icon" href="'.get_template_directory_uri().'/esports.jpg" />';
+}
+add_action('wp_head', 'add_favicon');
 
 ?>
