@@ -1,8 +1,12 @@
 <?php get_header(); ?>
 
+<!-- Home Section - Welcomes users to the website -->
+
 <section class="arena" id="home">
     <h1>Welcome to Esports Arena</h1>
 </section>
+
+<!-- Quote of the Day Function - Displays a random quote -->
 
 <?php quote_of_the_day(); ?>
 
@@ -26,6 +30,7 @@
         
         <p>Join the community today and stay connected with the world of competitive gaming!</p>
 
+        <!-- CTA Button, takes the users to the leaderboard section -->
         <a href="#game-leaderboard" class="cta-btn">Explore More</a>
     </div>
 </section>
@@ -35,7 +40,7 @@
 <div id="game-leaderboard" class="container mt-5 leaderboard-section">
     <h2>Top Teams</h2>
 
-    <!-- Accordion for Game Categories -->
+    <!-- Accordion for Game Categories - Allows users to collapse and expand each game's leaderboard -->
     <div id="leaderboardAccordion">
         
         <!-- League of Legends -->
@@ -477,15 +482,21 @@
 
 <section class="upcoming-tournaments" id="upcoming-tournaments">
     <h2>Tournaments</h2>
+
+    <!-- Cards for tournament lists -->
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Upcoming Matches</h5>
+
+            <!-- Accordion for the tournaments list -->
             <div class="accordion" id="tournamentAccordion">
             <ul>
                 <li>
                     <a class="d-block" data-toggle="collapse" href="#tournament1" role="button" aria-expanded="false" aria-controls="tournament1">
                         <strong>Battle Royale Invitational - Fortnite</strong> - Date: May 25, 2025
                     </a>
+
+                    <!-- Collapsible information for tournament 1 -->
                     <div class="collapse" id="tournament1" data-parent="#tournamentAccordion">
                         <div class="card card-body mt-2">
                             <p><strong>Description:</strong> The Battle Royale Invitational is an online-only event bringing together top competitive fortnite players from around the world. Contestants battle it out in a last-duo-standing format, where only the best duo survives to claim the grand prize.</p>
@@ -494,7 +505,7 @@
                             <p><strong>Prize Pool:</strong> $100,000</p>
                             <p><strong>Player Requirements:</strong> Players must be ranked in the top 100 of the global leaderboard to qualify.</p>
                             <p><strong>Registration Deadline:</strong> May 7, 2025</p>
-                            <!-- This link will not work, it is just a placeholder for now -->
+                            <!-- This link will not work, it is just a placeholder for now. It is a call to action button. -->
                             <a href="#register" class="btn btn-register">Register Now</a>
                         </div>
                     </div>
@@ -503,6 +514,8 @@
                     <a class="d-block" data-toggle="collapse" href="#tournament2" role="button" aria-expanded="false" aria-controls="tournament2">
                         <strong>Champion's League - Valorant</strong> - Date: June 18, 2025
                     </a>
+
+                    <!-- Collapsible information for tournament 2 -->
                     <div class="collapse" id="tournament2" data-parent="#tournamentAccordion">
                         <div class="card card-body mt-2">
                             <p><strong>Description:</strong> The Champion's League is an annual tournament featuring the world’s best valorant players. This tournament is played in a series of group stages followed by knockout rounds.</p>
@@ -511,7 +524,7 @@
                             <p><strong>Prize Pool:</strong> $500,000</p>
                             <p><strong>Player Requirements:</strong> Players must be part of an accredited esports team or organization.</p>
                             <p><strong>Registration Deadline:</strong> June 1, 2025</p>
-                            <!-- This link will not work, it is just a placeholder for now -->
+                            <!-- This link will not work, it is just a placeholder for now. It is a call to action button. -->
                             <a href="#register" class="btn btn-register">Register Now</a>
                         </div>
                     </div>
@@ -520,6 +533,8 @@
                     <a class="d-block" data-toggle="collapse" href="#tournament3" role="button" aria-expanded="false" aria-controls="tournament3">
                         <strong>Esports Championship - League of Legends</strong> - Date: July 28, 2025
                     </a>
+
+                    <!-- Collapsible information for tournament 3 -->
                     <div class="collapse" id="tournament3" data-parent="#tournamentAccordion">
                         <div class="card card-body mt-2">
                             <p><strong>Description:</strong> The Esports Championship brings together elite players, competing for the title of best overall league of legends esports team. The tournament will span over several weeks.</p>
@@ -528,7 +543,7 @@
                             <p><strong>Prize Pool:</strong> $750,000</p>
                             <p><strong>Player Requirements:</strong> Open to teams with at least five members from any esports discipline.</p>
                             <p><strong>Registration Deadline:</strong> July 15, 2025</p>
-                            <!-- This link will not work, it is just a placeholder for now -->
+                            <!-- This link will not work, it is just a placeholder for now. It is a call to action button. -->
                             <a href="#register" class="btn btn-register">Register Now</a>
                         </div>
                     </div>
@@ -537,6 +552,8 @@
                     <a class="d-block" data-toggle="collapse" href="#tournament4" role="button" aria-expanded="false" aria-controls="tournament4">
                         <strong>World Championship - Dota 2, Dead By Daylight, Rocket League</strong> - Date: September 29, 2025
                     </a>
+
+                    <!-- Collapsible information for tournament 4 -->
                     <div class="collapse" id="tournament4" data-parent="#tournamentAccordion">
                         <div class="card card-body mt-2">
                             <p><strong>Description:</strong> The World Championship is the pinnacle of competitive gaming, featuring the top players across multiple genres. This tournament is considered the ultimate test for esports athletes, where the best of the best compete for international glory.</p>
@@ -545,7 +562,7 @@
                             <p><strong>Prize Pool:</strong> $2,000,000</p>
                             <p><strong>Player Requirements:</strong> Only the top 10 ranked teams in each game will qualify.</p>
                             <p><strong>Registration Deadline:</strong> September 10, 2025</p>
-                            <!-- This link will not work, it is just a placeholder for now -->
+                            <!-- This link will not work, it is just a placeholder for now. it is a call to action button. -->
                             <a href="#register" class="btn btn-register">Register Now</a>
                         </div>
                     </div>
@@ -573,6 +590,7 @@
                                 height="315" width="560" frameborder="0" scrolling="no" allowfullscreen="true" loading="lazy"></iframe>
                     </div>
 
+                    <!-- A link to watch on twitch official website -->
                     <a href="https://www.twitch.tv/caedrel" class="btn btn-primary mt-3" target="_blank">Watch on Twitch</a>
                 </div>
             </div>
@@ -591,6 +609,7 @@
                                 height="315" width="560" frameborder="0" scrolling="no" allowfullscreen="true" loading="lazy"></iframe>
                     </div>
 
+                    <!-- A link to watch on twitch official website -->
                     <a href="https://www.twitch.tv/grimm" class="btn btn-primary mt-3" target="_blank">Watch on Twitch</a>
                 </div>
             </div>
@@ -609,6 +628,7 @@
                                 height="315" width="560" frameborder="0" scrolling="no" allowfullscreen="true" loading="lazy"></iframe>
                     </div>
 
+                    <!-- A link to watch on twitch official website -->
                     <a href="https://www.twitch.tv/fairypeak" class="btn btn-primary mt-3" target="_blank">Watch on Twitch</a>
                 </div>
             </div>
@@ -629,6 +649,7 @@
                                 height="315" width="560" frameborder="0" scrolling="no" allowfullscreen="true" loading="lazy"></iframe>
                     </div>
 
+                    <!-- A link to watch on twitch official website -->
                     <a href="https://www.twitch.tv/nickeh30" class="btn btn-primary mt-3" target="_blank">Watch on Twitch</a>
                 </div>
             </div>
@@ -647,6 +668,7 @@
                                 height="315" width="560" frameborder="0" scrolling="no" allowfullscreen="true" loading="lazy"></iframe>
                     </div>
 
+                    <!-- A link to watch on twitch official website -->
                     <a href="https://www.twitch.tv/slate" class="btn btn-primary mt-3" target="_blank">Watch on Twitch</a>
                 </div>
             </div>
@@ -665,6 +687,7 @@
                                 height="315" width="560" frameborder="0" scrolling="no" allowfullscreen="true" loading="lazy"></iframe>
                     </div>
 
+                    <!-- A link to watch on twitch official website -->
                     <a href="https://www.twitch.tv/blitzspanks" class="btn btn-primary mt-3" target="_blank">Watch on Twitch</a>
                 </div>
             </div>
@@ -680,6 +703,7 @@
         <div class="card-body">
             <h5 class="card-title">Connect with us on social media</h5>
             <ul>
+                <!-- Social Media Links with Icons -->
                 <li><a href="https://facebook.com/esportsarena" target="_blank" class="social-icon facebook">Facebook</a></li>
                 <li><a href="https://twitter.com/esportsarena" target="_blank" class="social-icon twitter">Twitter</a></li>
                 <li><a href="https://instagram.com/esportsarena" target="_blank" class="social-icon instagram">Instagram</a></li>
@@ -690,13 +714,14 @@
     </div>
 </section>
 
-<!-- Latest Posts Section - Updated accordingly to search bar function (search.php) - Checks if it is a search page first -->
+<!-- Latest Posts Section - Updated accordingly to search bar function (search.php) - Checks if it is a search page first. It only shows if it is not a search page. -->
 
 <?php if (!is_search()) : ?>
     <section id="latest-posts" class="posts-section">
         <h2>Latest Posts</h2>
         <?php if (have_posts()) : ?>
             <div class="posts">
+                <!-- Loops through posts -->
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="post-item">
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -705,6 +730,7 @@
                 <?php endwhile; ?>
             </div>
         <?php else : ?>
+            <!-- Message for no results found -->
             <section class="no-results">
                 <p>No results found. Please try a different search.</p>
             </section>
@@ -717,7 +743,7 @@
 <section id="testimonials" class="testimonials-section">
     <h2>What Our Gamers Say</h2>
     
-    <!-- Bootstrap 4 Carousel -->
+    <!-- Bootstrap 4 Carousel for carousel -->
     <div id="testimonialsCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
         <div class="carousel-inner">
 
@@ -767,7 +793,7 @@
             </div>
         </div>
 
-        <!-- Controls -->
+        <!-- Carousel Controls (previous and next buttons) -->
         <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>

@@ -1,5 +1,7 @@
 <?php
 
+// Function that sets up the themes features
+
 function esports_theme_setup() 
 {
     add_theme_support('title-tag');
@@ -7,20 +9,29 @@ function esports_theme_setup()
 }
 add_action('after_setup_theme', 'esports_theme_setup');
 
+// Function that enqueues styles and scripts
+
 function esports_enqueue_styles() 
 {
+    // Main stylesheet of the theme 
     wp_enqueue_style('esports-style', get_stylesheet_uri());
 
     // Enqueue Bootstrap CSS
     wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
 
-    // Enqueue jQuery
+    // Enqueue jQuery (wordpress has this by default, so there is no url attached)
     wp_enqueue_script('jquery');
 
-    // Enqueue Bootstrap JS
+    // Enqueue Bootstrap JS with jquery
     wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js', array('jquery'), null, true);
+
+    // Loads Font Awesome
+    wp_enqueue_script('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'esports_enqueue_styles');
+
+
+// Function that forces the site title to Esports Arena (for different installations of wordpress)
 
 function force_esports_arena_title() 
 { 
@@ -29,7 +40,10 @@ function force_esports_arena_title()
 } 
 add_action('after_switch_theme', 'force_esports_arena_title'); // Runs when theme is activated
 
-/* Custom Widget - Quote of the Day - Completely copied and pasted from my Assessment 1! */
+/* 
+Custom Widget - Quote of the Day 
+This function generates and displays a random motivational quote
+It is copied and reused from my Assessment 1 */
 
 function quote_of_the_day() 
 {
@@ -42,6 +56,7 @@ function quote_of_the_day()
         "Life is what happens when you're busy making other plans. - John Lennon"
     );
 
+    // Selects random quote from the above and displays it on the website
     $random_quote = esc_html($quotes[array_rand($quotes)]);
 
     echo '<div class="quote_of_the_day">';

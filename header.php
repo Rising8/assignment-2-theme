@@ -2,11 +2,13 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
+
+    <!-- Responsive design for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- SEO Optimization -->
     <meta name="description" content="The ultimate destination for competitive gaming and esports tournaments.">
-    <meta name="keywords" content="esports, gaming, tournaments, live streams">
+    <meta name="keywords" content="esports, gaming, tournaments, gaming leaderboards, live streams">
 
     <!-- Dynamic Title -->
     <title><?php bloginfo('name'); ?> <?php wp_title('|', true, 'left'); ?></title>
@@ -23,7 +25,7 @@
 <body <?php body_class(); ?>>
 
 <header>
-    <!-- Bootstrap Navbar -->
+    <!-- Bootstrap Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             
@@ -32,7 +34,7 @@
                 <?php bloginfo('name'); ?>
             </a>
 
-            <!-- Navbar Toggle Button -->
+            <!-- Mobile Friendly Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,6 +42,9 @@
             <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+
+                    <!-- Navigation links (checks if it is on the front page to highlight active link) -->
+
                     <li class="nav-item <?php echo (is_front_page() ? 'active' : ''); ?>">
                         <a class="nav-link" href="<?php echo home_url(); ?>#home">Home</a>
                     </li>
@@ -66,7 +71,7 @@
                     </li>
                 </ul>
 
-                <!-- Search Bar -->
+                <!-- Search Bar for quickly looking up post contents -->
 
                 <form class="search-form form-inline my-2 my-lg-0 ml-3" action="<?php echo home_url('/'); ?>" method="get">
                     <input class="form-control search-input mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="s">

@@ -42,6 +42,14 @@ header, footer
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 768px) 
+{
+    header
+    {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+}
+
 /* === NavBar Styling === */
 
 /* Navbar Styling */
@@ -78,6 +86,19 @@ header, footer
 .navbar-toggler-icon 
 {
     background-color: #fff; /* Changes color of the mobile toggle icon */
+}
+
+@media (max-width: 768px) 
+{
+    .navbar-nav .nav-item
+    {
+        margin-left: 10px; /* Reduced space between links */
+    }
+
+    .navbar-nav .nav-link
+    {
+        font-size: 14px; /* Slightly smaller font for mobile */
+    }
 }
 
 /* Search Bar Styling */
@@ -139,11 +160,18 @@ header, footer
     .search-form .form-control
     {
         width: 100%;
+        margin-bottom: 10px; /* Adds space between input and button */
     }
 
     .search-form .btn
     {
         width: 100%;
+    }
+
+    .search-form input.form-control
+    {
+        width: 100%;
+        padding: 12px; /* Larger padding for better touch targets */
     }
 }
 
@@ -206,6 +234,19 @@ header, footer
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
 
+@media (max-width: 768px)
+{
+    .arena
+    {
+        padding: 60px 20px; /* Prevents content from getting too cramped */
+    }
+
+    .arena h1 
+    {
+        font-size: 30px;
+    }
+}
+
 /* === Quote of the Day Styling === */
 
 .quote_of_the_day 
@@ -244,6 +285,26 @@ header, footer
 {
     box-shadow: 0 0 10px 2px rgba(0, 255, 0, 1); /* Intensifies neon glow */
     background-color: rgba(0, 0, 0, 1); 
+}
+
+@media (max-width: 768px)
+{
+    .quote_of_the_day
+    {
+        padding: 15px;
+        font-size: 1.1em;
+        max-width: 100%; /* Allows quote to fill the screen */
+    }
+
+    .quote_of_the_day h3 
+    {
+        font-size: 1.25em;
+    }
+
+    .quote_of_the_day p 
+    {
+        font-size: 1em;
+    }
 }
 
 /* === About Section Styling === */
@@ -338,6 +399,44 @@ header, footer
     background-color: #ff0000; /* Darker red when hovered */
 }
 
+@media (max-width: 768px)
+{
+    .about-us
+    {
+        padding: 30px 10px;
+    }
+
+    .about-us h2 
+    {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    
+    .about-us p 
+    {
+        font-size: 1em;
+        line-height: 1.4;
+        margin: 15px auto;
+    }
+
+    .about-us h3 
+    {
+        font-size: 1.5em;
+    }
+
+    .about-us ul li 
+    {
+        font-size: 1em;
+    }
+
+    .about-us .cta-btn
+    {
+        width: 100%;
+        padding: 15px;
+        font-size: 1em;
+    }
+}
+
 /* About Section Background with a Gradient */
 
 .about-us::before 
@@ -418,6 +517,16 @@ header, footer
     {
         padding: 15px;
     }
+
+    .card-body p 
+    {
+        font-size: 0.8rem;
+    }
+
+    .collapse 
+    {
+        max-height: 200px; /* Ensures that the collapsible section does not overflow */
+    }
 }
 
 /* === Leaderboard Section with Bootstrap Cards === */
@@ -494,6 +603,49 @@ header, footer
 .leaderboard-section .btn:hover 
 {
     background-color: #0069cc; /* Darker blue when hovered */
+}
+
+@media (max-width: 768px)
+{
+    .leaderboard-section
+    {
+        padding: 15px;
+        border-radius: 5px; /* Smaller rounded corners */
+    }
+
+    .leaderboard-section .card-body 
+    {
+        padding: 15px;
+    }
+
+    .leaderboard-section .card-title 
+    {
+        font-size: 20px;
+    }
+
+    .leaderboard-section ul 
+    {
+        padding-left: 15px;
+    }
+
+    .leaderboard-section li 
+    {
+        font-size: 1rem;
+        padding: 8px 0;
+    }
+
+    .leaderboard-section h2 
+    {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .leaderboard-section .btn 
+    {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
 }
 
 /* === Upcoming Tournaments Section === */
@@ -687,6 +839,46 @@ header, footer
     transform: scale(1.05);
 }
 
+@media (max-width: 768px)
+{
+    .live-streams-section
+    {
+        padding: 20px 0;
+    }
+
+    .live-streams-section .card 
+    {
+        margin-bottom: 15px;
+        flex-direction: column;
+    }
+
+    .live-streams-section .card-body 
+    {
+        padding: 15px;
+    }
+
+    .live-streams-section .card-title
+    {
+        font-size: 1.4rem;
+    }
+
+    .live-streams-section .card-text
+    {
+        font-size: 14px;
+    }
+
+    .live-streams-section h2
+    {
+        font-size: 2.5rem;
+    }
+
+    .live-streams-section .btn-primary
+    {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+}
+
 /* === Social Media Section with Bootstrap Cards === */
 
 .social-media .card 
@@ -744,6 +936,40 @@ header, footer
     margin-bottom: 20px;
 }
 
+@media (max-width: 768px)
+{
+    .social-media .card
+    {
+        margin-bottom: 15px;
+    }
+
+    .social-media .card-body
+    {
+        padding: 15px;
+    }
+
+    .social-media .card-title
+    {
+        font-size: 1.4rem;
+    }
+
+    .social-media ul 
+    {
+        padding-left: 10px;
+    }
+
+    .social-media a 
+    {
+        font-size: 1.2rem;
+        margin: 0 10px;
+    }
+
+    .social-media h2 
+    {
+        font-size: 2.5rem;
+    }
+}
+
 /* === Latest Posts Section Styling === */
 
 .posts-section h2 
@@ -776,7 +1002,22 @@ header, footer
     text-decoration: underline;
 }
 
-/* Testimonials Section Styling */
+@media (max-width: 768px)
+{
+    .posts-section h2
+    {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .posts .post-item 
+    {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* === Testimonials Section Styling === */
 
 .testimonials-section 
 {
@@ -821,6 +1062,21 @@ header, footer
 .carousel-item .testimonial-item .stars
 {
     color: #ffcc00; /* Yellow stars */
+}
+
+@media (max-width: 768px)
+{
+    .testimonials-section
+    {
+        padding: 30px 15px;
+    }
+
+    .carousel-item .testimonial-item
+    {
+        padding: 15px;
+        margin: 5px;
+        max-width: 90%; /* This time not 100%, as using 90% allows breathing room for the testimonials section, and ensures it doesn't touch the edges  */
+    }
 }
 
 /* === Footer Styling with focus on Typography === */
@@ -880,4 +1136,28 @@ footer .social-icons a:hover
 {
     transform: scale(1.05);
     filter: brightness(1.2); /* Subtle brightness effect on hover */
+}
+
+@media (max-width: 768px)
+{
+    footer
+    {
+        padding: 30px 15px;
+    }
+
+    footer .social-icons a 
+    {
+        font-size: 25px;
+    }
+
+    .sponsor-logos
+    {
+        gap: 20px;
+    }
+
+    .sponsor-item
+    {
+        flex: 1 1 100px; /* Allows the logos to be smaller */
+        max-width: 100%;
+    }
 }
